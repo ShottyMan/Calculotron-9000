@@ -7,7 +7,7 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Path to a program."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "FILEPATH",

@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: Calculotron-9000
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -39,7 +39,7 @@ include CMakeFiles\rules.ninja
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Debug (default)" && "D:\Program Files\MicrosoftVSE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Release && "D:\Program Files\MicrosoftVSE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -50,7 +50,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Debug (default)" && "D:\Program Files\MicrosoftVSE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Ekha7\source\repos\Calculotron-9000 -B"C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Release && "D:\Program Files\MicrosoftVSE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Ekha7\source\repos\Calculotron-9000 -BC:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -71,8 +71,8 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 build cmake_object_order_depends_target_Calculotron-9000: phony || Calculotron-9000\CMakeFiles\Calculotron-9000.dir
 
-build Calculotron-9000\CMakeFiles\Calculotron-9000.dir\Calculotron-9000.cpp.obj: CXX_COMPILER__Calculotron-9000_Debug ..\..\..\Calculotron-9000\Calculotron-9000.cpp || cmake_object_order_depends_target_Calculotron-9000
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+build Calculotron-9000\CMakeFiles\Calculotron-9000.dir\Calculotron-9000.cpp.obj: CXX_COMPILER__Calculotron-9000_Release ..\..\..\Calculotron-9000\Calculotron-9000.cpp || cmake_object_order_depends_target_Calculotron-9000
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG
   OBJECT_DIR = Calculotron-9000\CMakeFiles\Calculotron-9000.dir
   OBJECT_FILE_DIR = Calculotron-9000\CMakeFiles\Calculotron-9000.dir
   TARGET_COMPILE_PDB = Calculotron-9000\CMakeFiles\Calculotron-9000.dir\
@@ -86,9 +86,9 @@ build Calculotron-9000\CMakeFiles\Calculotron-9000.dir\Calculotron-9000.cpp.obj:
 #############################################
 # Link the executable Calculotron-9000\Calculotron-9000.exe
 
-build Calculotron-9000\Calculotron-9000.exe: CXX_EXECUTABLE_LINKER__Calculotron-9000_Debug Calculotron-9000\CMakeFiles\Calculotron-9000.dir\Calculotron-9000.cpp.obj
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+build Calculotron-9000\Calculotron-9000.exe: CXX_EXECUTABLE_LINKER__Calculotron-9000_Release Calculotron-9000\CMakeFiles\Calculotron-9000.dir\Calculotron-9000.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG
+  LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = Calculotron-9000\CMakeFiles\Calculotron-9000.dir
   POST_BUILD = cd .
@@ -103,7 +103,7 @@ build Calculotron-9000\Calculotron-9000.exe: CXX_EXECUTABLE_LINKER__Calculotron-
 # Utility command for edit_cache
 
 build Calculotron-9000\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Debug (default)\Calculotron-9000" && "D:\Program Files\MicrosoftVSE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Release\Calculotron-9000 && "D:\Program Files\MicrosoftVSE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -114,7 +114,7 @@ build Calculotron-9000\edit_cache: phony Calculotron-9000\CMakeFiles\edit_cache.
 # Utility command for rebuild_cache
 
 build Calculotron-9000\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Debug (default)\Calculotron-9000" && "D:\Program Files\MicrosoftVSE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Ekha7\source\repos\Calculotron-9000 -B"C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D C:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Release\Calculotron-9000 && "D:\Program Files\MicrosoftVSE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Ekha7\source\repos\Calculotron-9000 -BC:\Users\Ekha7\source\repos\Calculotron-9000\out\build\x64-Release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -134,14 +134,14 @@ build Calculotron-9000.exe: phony Calculotron-9000\Calculotron-9000.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Ekha7/source/repos/Calculotron-9000/out/build/x64-Debug (default)
+# Folder: C:/Users/Ekha7/source/repos/Calculotron-9000/out/build/x64-Release
 
 build all: phony Calculotron-9000\all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Ekha7/source/repos/Calculotron-9000/out/build/x64-Debug (default)/Calculotron-9000
+# Folder: C:/Users/Ekha7/source/repos/Calculotron-9000/out/build/x64-Release/Calculotron-9000
 
 build Calculotron-9000\all: phony Calculotron-9000\Calculotron-9000.exe
 

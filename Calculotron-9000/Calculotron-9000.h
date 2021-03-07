@@ -5,4 +5,20 @@
 
 #include <iostream>
 
+void Printline(const char* z)
+
+void Print(const char* z)
+
+void endl()
+
+void ClearScreen()
+
+void Print(int o)
+
+namespace Number
+
+namespace interger
+
+	void PrintDb(double o)
+
 // TODO: Reference additional headers your program requires here.
