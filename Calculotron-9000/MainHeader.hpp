@@ -5,6 +5,8 @@
 
 #include <iostream>
 
+#include <cmath>
+
 #include "Printing/Number/NumbersHeader.hpp"
 
 #include "Printing/Text/TextHeader.hpp"
