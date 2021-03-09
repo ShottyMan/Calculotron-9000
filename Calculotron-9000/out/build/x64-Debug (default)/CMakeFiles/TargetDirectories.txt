@@ -1,0 +1,3 @@
+C:/Users/Ekha7/source/repos/Calculotron-9000/Calculotron-9000/out/build/x64-Debug (default)/CMakeFiles/Calculotron-9000.dir
+C:/Users/Ekha7/source/repos/Calculotron-9000/Calculotron-9000/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+C:/Users/Ekha7/source/repos/Calculotron-9000/Calculotron-9000/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

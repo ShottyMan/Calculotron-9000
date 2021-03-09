@@ -4,7 +4,9 @@
 
 #include <iostream>
 
-namespace Text {
+#include "MainHeader.hpp"
+
+/*namespace Text {
 
     void Print(const char* z)
     {
@@ -31,10 +33,7 @@ void ClearScreen()
 #endif none
 }
 
-void endl()
-{
-    std::cout << std::endl;
-}
+
 
 
 
@@ -118,7 +117,7 @@ namespace Number
         }
     }
 }
-
+*/
 
 //This is supposed to be a repository of all of the equations I begin learning during class such as the equations in physics.
 
@@ -375,6 +374,9 @@ int main() {
 
         case 2:
             do {
+
+                ClearScreen();
+
                 if (Input == 1) { break; }
                 Text::Printline("Choose the equations 1.d=((Vi+Vf)/2)*t, 2.d=Vi*t+1/2*a*t^2, 3.Vf=Vi+a*t, 4.Vf^2=Vi^2+2*a*d: ");
                 double d = 0, Vi = 0, a = 0, t = 0, Vf = 0;
@@ -387,11 +389,10 @@ int main() {
 
 
                 case 1:
+                    
+                    ClearScreen();
+
                     Text::Print("Pick which thing to solve, 1.Intial velocity(Vi), 2.Final Velocity(Vf), 3.Time(t) or 4.Displacement(d): ");
-
-                    
-
-                    
 
                     std::cin >> solvefor;
 
@@ -400,6 +401,9 @@ int main() {
                     switch (solvefor)
                     {
                     case 1:
+
+                        ClearScreen();
+
                         if (solvefor != 1) { break; }
                         Text::Print("Input the final velocity(M/s): ");
 
@@ -415,7 +419,20 @@ int main() {
 
                         std::cin >> d;
 
+                        Vi = ((d / t) * 2) - Vf;
 
+                        Number::PrintDb(Vi);
+
+                        Text::Print("1.Return to main menue\n2.Go back\n3.Exit program");
+
+                        std::cin >> c;
+
+                        Number::interger::ErrorCheckerRange(c, 3);
+
+                        //Used as exit program or thing
+                        if (c == 3) { return 0; }
+                        else if (c == 2) { break; option = 1; }  //used to go back to the menue before this one.
+                        else if (c == 1) { break; } //Used to go to the main menue
 
                     case 2:
                         if (solvefor != 2){ break; }
@@ -423,6 +440,9 @@ int main() {
                         if (solvefor != 3) { break; }
                     case 4:
                         if (solvefor != 4) { break; }
+
+                        ClearScreen();
+
                         Text::Print("Input the initial velocity in M/s: ");
 
                         std::cin >> Vi;

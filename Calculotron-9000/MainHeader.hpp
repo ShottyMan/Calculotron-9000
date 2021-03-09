@@ -5,20 +5,8 @@
 
 #include <iostream>
 
-void Printline(const char* z)
+#include "Printing/Number/NumbersHeader.hpp"
 
-void Print(const char* z)
-
-void endl()
-
-void ClearScreen()
-
-void Print(int o)
-
-namespace Number
-
-namespace interger
-
-	void PrintDb(double o)
+#include "Printing/Text/TextHeader.hpp"
 
 // TODO: Reference additional headers your program requires here.
