@@ -440,9 +440,13 @@ int main() {
 
                         std::cin >> t;
 
+                        Number::dble::ErrorCheckerNumber(t);
+
                         Text::Print("Input the displacement(Meters): ");
 
                         std::cin >> d;
+
+                        Number::dble::ErrorCheckerNumber(d);
 
                         Vi = ((d / t) * 2) - Vf;
 
@@ -462,10 +466,85 @@ int main() {
                         break;
 
                     case 2:
+
+                        ClearScreen();
+
+                        Text::Printline("Input the displacement in meters(d): ");
+
+                        std::cin >> d;
+
+                        Number::dble::ErrorCheckerNumber(d);
+
+                        Text::Printline("\nInput the time in seconds(t): ");
+
+                        std::cin >> t;
+
+                        Number::dble::ErrorCheckerNumber(t);
+
+                        Text::Printline("\nInput the final velocity in M/s(Vf): ");
+
+                        std::cin >> Vf;
+
+                        Number::dble::ErrorCheckerNumber(Vf);
+
+                        Vi = ((2 * d)/t)-Vf; 
+
+                        Text::Printline("\nThe initial velocity in M/s is: ");
+
+                        Number::PrintDb(Vi);
+
+                        Text::Print("1.Return to main menue\n2.Go back\n3.Exit program");
+
+                        std::cin >> c;
+
+                        Number::interger::ErrorCheckerRange(c, 3);
+
+                        //Used as exit program or thing
+                        if (c == 3) { return 0; }
+                        else if (c == 2) { break; option = 1; }  //used to go back to the menue before this one.
+                        else if (c == 1) { break; } //Used to go to the main menue
+
                         
                         break;
 
                     case 3:
+
+                        Text::Printline("Input the displacement in meters(d): ");
+
+                        std::cin >> d;
+
+                        Number::dble::ErrorCheckerNumber(d);
+
+                        Text::Printline("\nIntial velocity in m/s(Vi): ");
+
+                        std::cin >> Vi;
+
+                        Number::dble::ErrorCheckerNumber(Vi);
+
+                        Text::Printline("\nInput the final velocity in m/s(Vf): ");
+
+                        std::cin >> Vf;
+
+                        Number::dble::ErrorCheckerNumber(Vf);
+
+                        t = ((2*d)-Vi)/Vf;
+
+                        Text::Printline("\nThe time in m/s is: ");
+
+                        Number::PrintDb(t);
+
+                        Text::Print("1.Return to main menue\n2.Go back\n3.Exit program");
+
+                        std::cin >> c;
+
+                        Number::interger::ErrorCheckerRange(c, 3);
+
+                        //Used as exit program or thing
+                        if (c == 3) { return 0; }
+                        else if (c == 2) { break; option = 1; }  //used to go back to the menue before this one.
+                        else if (c == 1) { break; } //Used to go to the main menue
+
+
                         
                         break;
 
