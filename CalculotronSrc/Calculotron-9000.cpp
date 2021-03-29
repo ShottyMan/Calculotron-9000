@@ -6,6 +6,8 @@
 
 #include "MainHeader.hpp"
 
+#include <cmath>
+
 /*namespace Text {
 
     void Print(const char* z)
@@ -429,7 +431,6 @@ int main() {
 
                         ClearScreen();
 
-                        if (solvefor != 1) { break; }
                         Text::Print("Input the final velocity(M/s): ");
 
                         std::cin >> Vf;
@@ -508,6 +509,8 @@ int main() {
                         break;
 
                     case 3:
+
+                        ClearScreen();
 
                         Text::Printline("Input the displacement in meters(d): ");
 
@@ -593,7 +596,47 @@ int main() {
 
                 case 2:
                     
-                    Text::Print("Placeholder");
+                    
+
+                    Text::Printline("Pick which value to solve for, 1. Intial Velocity 2. Time 3. Acceleration 4. Displacement");
+
+                    std::cin >> solvefor;
+
+                    switch(solvefor)
+                    {
+                        case 1:
+                        
+                        Text::Printline("");
+
+                        break;
+                        case 2:
+
+                        break;
+                        case 3:
+
+                        break;
+                        case 4:
+
+                        Text::Printline("Input the initial velocity in m/s(Vi): ");
+
+                        std::cin >> Vi;
+
+                        Text::Printline("\nInput the time in seconds(t): ");
+
+                        std::cin >> t;
+
+                        Text::Printline("\nInput the acceleration in m/s^2(a): ");
+
+                        std::cin >> a;
+
+                        d = Vi*t+0.5*a*pow(t,2);
+
+                        Text::Printline("\nThe displacement is: ");
+
+                        Number::PrintDb(d);
+                        
+                        break;
+                    }
                     
                     break;
 
