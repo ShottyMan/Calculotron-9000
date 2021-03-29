@@ -593,10 +593,10 @@ int main() {
                     default:
                         break;
                     }
-
+                  break;
                 case 2:
                     
-                    
+                    ClearScreen();
 
                     Text::Printline("Pick which value to solve for, 1. Intial Velocity 2. Time 3. Acceleration 4. Displacement");
 
@@ -605,6 +605,8 @@ int main() {
                     switch(solvefor)
                     {
                         case 1:
+                        
+                        ClearScreen();
                         
                         Text::Printline("");
 
@@ -616,6 +618,8 @@ int main() {
 
                         break;
                         case 4:
+
+                        ClearScreen();
 
                         Text::Printline("Input the initial velocity in m/s(Vi): ");
 
@@ -634,6 +638,11 @@ int main() {
                         Text::Printline("\nThe displacement is: ");
 
                         Number::PrintDb(d);
+
+                        //Used as exit program or thing
+                        if (c == 3) { return 0; }
+                        else if (c == 2) { break; option = 1; }  //used to go back to the menue before this one.
+                        else if (c == 1) { break; } //Used to go to the main menue
                         
                         break;
                     }

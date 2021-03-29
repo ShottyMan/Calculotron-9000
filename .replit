@@ -1,0 +1,2 @@
+language = "cpp"
+run = "g++ -std=c++17 -ggdb -Iinclude -Wall CalculotronSrc/Calculotron-9000.cpp CalculotronSrc/Printing/Number/ErrorChecker.cpp CalculotronSrc/Printing/Number/NumberPrinting.cpp CalculotronSrc/Printing/Text/TextPrinting.cpp -o bin/Calculotron-9000"
